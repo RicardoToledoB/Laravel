@@ -1,16 +1,21 @@
 <?php
+use EloquentOrm\User;
+Route::get('/crear', function () {
+    $user=User::create([
+        'name'=>'Ricardo',
+        'email'=>'l@gmail.com',
+        'password'=> bcrypt('1234'),
+        'gender'=>'m',
+        'biography'=>'Doctor',
+        
+    ]);
+    
+    return "Usuario Creado!";
+});
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/update', function () {
+    $user=User::find(1);
+    $user->name='algo';
+    $user->save();
+    return "Usuario Actualizado!";
 });
