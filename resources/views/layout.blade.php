@@ -18,20 +18,28 @@
                     <li>
                         <a href="{{route('home') }}">Home</a>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-tpggñe" data-toggle="dropdown">
+                            Consultas Eloquent
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ route('all') }}">
+                                    Todos los Usuarios (ALL)
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div>
         </nav>
-        <div class="jumbotron">
-            <div class="container">
-                <h1>Crud con eloquent-orm</h1>
-                <p>Cruso Eloquent</p>
-            </div>
-            
-        </div>
-        <div class='container'>
+
             @yield('content');
-        </div>
-        
+     
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
